@@ -30,5 +30,15 @@ $(document).ready(function () {
                 $(this).prop('contenteditable', false)
             }
         })
-
+        // delete
+        .on('click', '.delete', function(event) {
+            var result = confirm('您確定要刪除嗎？')
+            if (result) {
+                $(this).closest('li').remove()
+            }
+        })
+        // complete
+        .on('click', '.checkbox', function(event) {
+            $(this).closest('li').toggleClass('complete')
+        })
 });

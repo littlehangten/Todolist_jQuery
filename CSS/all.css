@@ -1,4 +1,4 @@
-#panel {
+.panel {
     width: 600px;
     background-color: #eee;
     padding: 40px;
@@ -13,6 +13,9 @@
     display: flex;
     padding: 10px;
 }
+#todo-list li.complete .checkbox {
+    background-color: #777;
+}
 #todo-list li:hover {
     background-color: #f8f8f8;
 }
@@ -26,6 +29,9 @@
 }
 #todo-list .content {
     flex: 1;
+}
+#todo-list li.complete .content {
+    text-decoration: line-through;
 }
 #todo-list .actions > * {
     padding: 0 10px;
