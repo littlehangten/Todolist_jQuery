@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.css">
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/handlebars-v4.4.3.js"></script>
     <script src="js/all.js"></script>
 </head>
 <body>
@@ -45,14 +46,14 @@
     </div>
 
     <!-- 設定一個模板供js取用 -->
-    <div class="template hide">
-        <li>
+    <script id="todo-list-item-template" type="text/x-handlebars-template">
+        <li class="{{#if is_complete}}complete{{/if}}">
         <div class="checkbox"></div>
-        <div class="content"></div>
+        <div class="content">{{content}}</div>
             <div class="actions">
                 <div class="delete">x</div>
             </div>
         </li>
-    </div>
+    </script>
 </body>
 </html>
