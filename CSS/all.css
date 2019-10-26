@@ -1,3 +1,6 @@
+.hide {
+    display: none;
+}
 #panel {
     width: 600px;
     background-color: #eee;
